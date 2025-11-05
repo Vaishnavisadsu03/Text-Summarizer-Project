@@ -11,6 +11,4 @@ class DataValidationTrainingPipeline:
         config = ConfigurationManager()
         data_validation_config = config.get_data_validation_config()
         data_validation = DataValiadtion(config=data_validation_config)
-        data_validation.download_file()
-        data_validation.extract_zip_file()
-        logger.info("Data Ingestion completed successfully")
+        data_validation.validate_all_files_exist()
